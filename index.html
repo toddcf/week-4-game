@@ -2,23 +2,70 @@
 <html>
 <head>
 	<title>Collector of the Crystal Skulls!</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1”>
 </head>
 <body>
 
 	<!-- Header -->
-	
-	<!-- Four crystals displayed as buttons on the page. -->
+	<header>
+		<h1>Collector of the Crystal Skulls!</h1>
+	</header>
 
-	<!-- Display: Number of games won and lost -->
-	
+	<div id="main-container">
+
+		<!-- Image of Indiana Jones. -->
+		<div class="game-container" class="col-md-8">
+			<div id="banner">
+				<img id="indiana" src="assets/images/indiana-jones-whip-and-airplane.png" alt="Indiana Jones">
+			</div>
+
+			<div id="number-box" class="col-md-6">
+				<div id="random-number">
+					<h2>Random Number:</h2>
+				
+					<!-- Display: Randomly generated number. -->
+				</div>
+
+				<div id="your-score">
+					<h2>Your Score:</h2>
+
+					<h2>Your Wins:</h2>
+					
+					<h2>Your Losses:</h2>
+				</div>
+			</div>
+
+			<aside class="col-md-2">
+				<!-- Instructions -->
+				<h3>Instructions:</h3><br>
+				<ol>
+					<li>Each crystal has a hidden value. Collect crystals by clicking on them.</li><br>
+					<li>Watch your score increase with each crystal you collect.</li><br>
+					<li>If you can match your score to the randomly-generated number exactly, you escape with your life!</li><br>
+					<li>If your score exceeds the randomly-generated number, you lose.</li>
+				</ol>
+			</aside>
+
+			<div id="crystal-box" class="col-md-8">
+				<!-- Four crystals displayed as buttons on the page. -->
+				<img src="assets/images/crystal-skull-blue.jpg" class="crystals" alt="Blue Crystal">
+				<img src="assets/images/crystal-skull-green.jpg" class="crystals" alt="Green Crystal">
+				<img src="assets/images/crystal-skull-red.jpg" class="crystals" alt="Red Crystal">
+				<img src="assets/images/crystal-skull-violet.jpg" class="crystals" alt="Violet Crystal">
+			</div>
+		</div>
+	</div>
 	<!-- Footer -->
-	
+	<footer>
+		<h5>&copy Copyright 2016 Todd Croak-Falen</h5>
+	</footer>
+
+	<!-- Add jQuery -- BEFORE your own JavaScript link and code. -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript">
-	// I know Javascript is supposed to run last -- but does the link go here or in the head?
-	<link rel="stylesheet" type="text/css" href="assets/javascript/game.js">
-	
+		// <link rel="stylesheet" type="text/css" href="assets/javascript/game.js">
 
 	
 	</script>

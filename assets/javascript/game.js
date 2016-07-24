@@ -1,6 +1,12 @@
-$( document ).ready(){
+$( document ).ready(function() {
 
-}
+	$('').on('click', function() {
+		alert('You\'ve collected a crystal skull!')
+	});
+
+});
+
+
 
 // The computer will display a random number BETWEEN 19 AND 120 -- see the random number generator we made in class.
 // Each of the four crystals has A HIDDEN RANDOM VALUE BETWEEN 1 AND 12.
