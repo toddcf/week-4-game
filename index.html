@@ -17,44 +17,49 @@
 
 		<!-- Image of Indiana Jones. -->
 		<div class="game-container" class="col-lg-8">
-			<div id="banner">
-				<img id="indiana" src="assets/images/indiana-jones-whip-and-airplane-cropped.png" alt="Indiana Jones">
+			<div class="row">
+				<div class="col-lg-8" id="banner">
+					<img id="indiana" src="assets/images/indiana-jones-whip-and-airplane-cropped.png" alt="Indiana Jones">
+				</div>
 			</div>
 
-			<div id="number-box" class="col-lg-6">
-				<div id="random-number">
-					<h2>Maximum Value You Can Carry:</h2>
-					<p><h1><span id="randomNumber"></span></h1></p>
-				
-					<!-- Display: Randomly generated number. -->
-				</div>
-
-				<div id="your-score">
-					<h2>Total Value of Crystals You're Holding: <span id="yourNumber"></span></h2>
-
-					<h2>Your Wins: </h2>
+			<div class="row">
+				<div id="number-box" class="col-lg-6">
+					<div id="random-number">
+						<h2>Maximum Value You Can Carry:</h2>
+						<p><h1><span id="maxValue"></span></h1></p>
 					
-					<h2>Your Losses: </h2>
+						<!-- Display: Randomly generated number. -->
+					</div>
+
+					<div id="your-score">
+						<h2>Total Value of Crystals You're Holding: <span id="yourNumber"></span></h2>
+
+						<h2>Your Wins: <span id="yourWins"></span></h2>
+						
+						<h2>Your Losses: <span id="yourLosses"></span></h2>
+					</div>
 				</div>
+			
+				<aside class="col-lg-2">
+					<h3>Instructions:</h3><br>
+					<ol>
+						<li>Each crystal has a hidden value. Click on crystals to collect them.</li><br>
+						<li>Watch your score increase with each crystal you collect.</li><br>
+						<li>Collect enough crystals to match the maximum value without going over, and you escape with your life!</li><br>
+						<li>But be careful -- take more crystals than the maximum value, and the walls of the cave will collapse on you!</li>
+					</ol>
+				</aside>
 			</div>
 
-			<aside class="col-lg-2">
-				<!-- Instructions -->
-				<h3>Instructions:</h3><br>
-				<ol>
-					<li>Each crystal has a hidden value. Click on crystals to collect them.</li><br>
-					<li>Watch your score increase with each crystal you collect.</li><br>
-					<li>Collect enough crystals to match the maximum value without going over, and you escape with your life!</li><br>
-					<li>But be careful -- take more crystals than the maximum value, and the walls of the cave will collapse on you!</li>
-				</ol>
-			</aside>
-
-			<div id="crystal-box" class="col-lg-8">
-				<!-- Hover, etc.: -->
-				<button><img src="assets/images/crystal-skull-blue.jpg" class="crystals" id="blue" alt="Blue Crystal"></button>
-				<button><img src="assets/images/crystal-skull-green.jpg" class="crystals" id="green" alt="Green Crystal"></button>
-				<button><img src="assets/images/crystal-skull-red.jpg" class="crystals" id="red" alt="Red Crystal"></button>
-				<button><img src="assets/images/crystal-skull-violet.jpg" class="crystals" id="violet" alt="Violet Crystal"></button>
+			<div class="row">
+				<div id="crystal-box" class="col-lg-8">
+					<!-- Hover, etc.: -->
+					<button><img src="assets/images/crystal-skull-blue.jpg" class="crystals" id="blue" alt="Blue Crystal"></button>
+					<button><img src="assets/images/crystal-skull-green.jpg" class="crystals" id="green" alt="Green Crystal"></button>
+					<button><img src="assets/images/crystal-skull-red.jpg" class="crystals" id="red" alt="Red Crystal"></button>
+					<button><img src="assets/images/crystal-skull-violet.jpg" class="crystals" id="violet" alt="Violet Crystal"></button>
+				</div>
 			</div>
 		</div>
 	</div>

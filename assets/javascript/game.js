@@ -1,26 +1,48 @@
 $( document ).ready(function() {
 
-	var numberToGuess = 50;
+	// numberToGuess = maxValue
+	// Set minimum value to 19.
+	// Set max value to 120.
+	var maxValue = getRandomInt(19, 120) {
+		return Math.floor(Math.random() * (120 - 19)) + 19;
 
 	var counter = 0;
 
-	// Four numbers between 1 and 12. Are they supposed to be randomly generated, too?
-	var numbers = [6, 10, 1, 3];
+	var wins = 0;
 
-	$('#randomNumber').text(numberToGuess);
+	var losses = 0;
+
+	// Four numbers between 1 and 12. Are they supposed to be randomly generated, too?
+	// numbers = crystalValues
+	var crystalValues = [6, 10, 1, 3];
+
+	$('#maxValue').text(maxValue);
+
+	// for (var i = 0; i < crystalValues.length; i++){
+
+	// 	// What does this do?? I'm suspicious of it!
+	// 	var imageCrystal = $('<img>');
+
+	// 	imageCrystal.attr('data-num', crystalValues[i]);
+
+
+	// }
 
 	$('.crystals').on('click', function() {
-		alert('You\'ve collected a crystal skull!');
-		counter = counter + 10;
+		// alert('You\'ve collected a crystal skull!');
+		counter = counter + parseInt($(this).data('num'));
 
-		$('yourNumber').text(counter);
+		// NOTE: This is giving me NaN (Not a Number).
+		$('#yourNumber').text(counter);
 		
-		if (counter == numberToGuess) {
+		if (counter == maxValue) {
 			alert('You won! You escaped with the crystals and your life!');
+			$('#yourWins').text(wins);
 		}
 
-		else if(counter > numberToGuess) {
+		else if(counter > maxValue) {
 			alert('You lost -- the walls caved in.');
+			$('#yourLosses').text(losses);
 		}
 	});
 

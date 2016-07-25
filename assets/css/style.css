@@ -39,7 +39,7 @@ h1 {
 #number-box {
 	float: left;
 	margin: 10px;
-	width: 50%;
+	width: 61%;
 	background-color: #bfbfbf;
 	padding: 30px;
 	border-radius: 15px;
@@ -62,7 +62,7 @@ aside {
 	background-color: #ffcc00;
 	float: right;
 	margin: 10px;
-	width: 16%;
+	width: 21%;
 	padding: 30px;
 	border-radius: 15px;
 }
