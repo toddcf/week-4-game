@@ -10,6 +10,7 @@ header {
 h1 {
 	font-size: 75px;
 	font-style: italic;
+	text-align: center;
 }
 
 #main-container {
@@ -28,9 +29,9 @@ h1 {
 	background-color: black;
 }
 
-/*Center this image.*/
 #indiana {
 	display: block;
+	clip: rect(0 5px 0 0);
 	margin: auto;
 	padding: 20px;
 }
@@ -42,6 +43,14 @@ h1 {
 	background-color: #bfbfbf;
 	padding: 30px;
 	border-radius: 15px;
+}
+
+#random-number {
+	padding: 20px;
+}
+
+#your-score {
+	padding: 20px;
 }
 
 h2 {
