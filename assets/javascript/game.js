@@ -4,11 +4,16 @@ $( document ).ready(function() {
 
 	var counter = 0;
 
+	// Four numbers between 1 and 12. Are they supposed to be randomly generated, too?
+	var numbers = [6, 10, 1, 3];
+
 	$('#randomNumber').text(numberToGuess);
 
 	$('.crystals').on('click', function() {
 		alert('You\'ve collected a crystal skull!');
 		counter = counter + 10;
+
+		$('yourNumber').text(counter);
 		
 		if (counter == numberToGuess) {
 			alert('You won! You escaped with the crystals and your life!');
@@ -31,10 +36,10 @@ $( document ).ready(function() {
 // If the player's score goes higher than the random number, they lose the game.
 // Total score is displayed and updated after each click -- BUT THE VALUE OF EACH CRYSTAL IS NOT DISPLAYED.
 // Update number of games won and lost.  Scoring system:
-// Matching the random number = 1 win.
-// If player's score goes higher than the random number = 1 loss.
+	// Matching the random number = 1 win.
+	// If player's score goes higher than the random number = 1 loss.
 // Win or lose, the game is, "reset," which will run the function at the beginning all over again.
 // When reset:
-// New random number...
-// All crystals have four different hidden values...
-// Player's total score is reset to zero -- except that in the video demo, the score is carried over.
+	// New random number...
+	// All crystals have four different hidden values...
+	// Player's "Total Value of Crystals You're Holding" is reset to zero.
