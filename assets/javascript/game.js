@@ -1,7 +1,22 @@
 $( document ).ready(function() {
 
-	$('').on('click', function() {
-		alert('You\'ve collected a crystal skull!')
+	var numberToGuess = 50;
+
+	var counter = 0;
+
+	$('#randomNumber').text(numberToGuess);
+
+	$('.crystals').on('click', function() {
+		alert('You\'ve collected a crystal skull!');
+		counter = counter + 10;
+		
+		if (counter == numberToGuess) {
+			alert('You won! You escaped with the crystals and your life!');
+		}
+
+		else if(counter > numberToGuess) {
+			alert('You lost -- the walls caved in.');
+		}
 	});
 
 });

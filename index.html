@@ -23,17 +23,18 @@
 
 			<div id="number-box" class="col-md-6">
 				<div id="random-number">
-					<h2>Random Number:</h2>
+					<h2>Maximum Value You Can Carry:</h2>
+					<p><span id="randomNumber"></span></p>
 				
 					<!-- Display: Randomly generated number. -->
 				</div>
 
 				<div id="your-score">
-					<h2>Your Score:</h2>
+					<h2>Total Value of Crystals You're Holding: </h2>
 
-					<h2>Your Wins:</h2>
+					<h2>Your Wins: </h2>
 					
-					<h2>Your Losses:</h2>
+					<h2>Your Losses: </h2>
 				</div>
 			</div>
 
@@ -41,19 +42,19 @@
 				<!-- Instructions -->
 				<h3>Instructions:</h3><br>
 				<ol>
-					<li>Each crystal has a hidden value. Collect crystals by clicking on them.</li><br>
+					<li>Each crystal has a hidden value. Click on crystals to collect them.</li><br>
 					<li>Watch your score increase with each crystal you collect.</li><br>
-					<li>If you can match your score to the randomly-generated number exactly, you escape with your life!</li><br>
-					<li>If your score exceeds the randomly-generated number, you lose.</li>
+					<li>Collect enough crystals to match the maximum value without going over, and you escape with your life!</li><br>
+					<li>But be careful -- take more crystals than the maximum value, and the walls of the cave will collapse on you.</li>
 				</ol>
 			</aside>
 
 			<div id="crystal-box" class="col-md-8">
-				<!-- Four crystals displayed as buttons on the page. -->
-				<img src="assets/images/crystal-skull-blue.jpg" class="crystals" alt="Blue Crystal">
-				<img src="assets/images/crystal-skull-green.jpg" class="crystals" alt="Green Crystal">
-				<img src="assets/images/crystal-skull-red.jpg" class="crystals" alt="Red Crystal">
-				<img src="assets/images/crystal-skull-violet.jpg" class="crystals" alt="Violet Crystal">
+				<!-- Hover, etc.: -->
+				<button><img src="assets/images/crystal-skull-blue.jpg" class="crystals" id="blue" alt="Blue Crystal"></button>
+				<button><img src="assets/images/crystal-skull-green.jpg" class="crystals" id="green" alt="Green Crystal"></button>
+				<button><img src="assets/images/crystal-skull-red.jpg" class="crystals" id="red" alt="Red Crystal"></button>
+				<button><img src="assets/images/crystal-skull-violet.jpg" class="crystals" id="violet" alt="Violet Crystal"></button>
 			</div>
 		</div>
 	</div>
@@ -65,7 +66,7 @@
 	<!-- Add jQuery -- BEFORE your own JavaScript link and code. -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript">
-		// <link rel="stylesheet" type="text/css" href="assets/javascript/game.js">
+		<link rel="stylesheet" type="text/css" href="assets/javascript/game.js">
 
 	
 	</script>

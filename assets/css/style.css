@@ -68,6 +68,18 @@ h3 {
 	clear: both;
 }
 
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: black;
+}
+
+.crystals:hover {
+	opacity: 0.85;
+	cursor: pointer;
+}
+
 .crystals {
 	width: 200px;
 	height: 200px;
