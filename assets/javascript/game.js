@@ -3,8 +3,10 @@ $( document ).ready(function() {
 	// numberToGuess = maxValue
 	// Set minimum value to 19.
 	// Set max value to 120.
-	var maxValue = getRandomInt(19, 120) {
-		return Math.floor(Math.random() * (120 - 19)) + 19;
+	var maxValue = Math.floor(Math.random() * (120 - 19)) + 19;
+			console.log(maxValue);
+			// Print the number to the screen.
+			$('#maxValue').html();
 
 	var counter = 0;
 
@@ -12,7 +14,8 @@ $( document ).ready(function() {
 
 	var losses = 0;
 
-	// Four numbers between 1 and 12. Are they supposed to be randomly generated, too?
+	// Four numbers between 1 and 12.
+	// They are supposed to be randomly generated (and therefore different) each game.
 	// numbers = crystalValues
 	var crystalValues = [6, 10, 1, 3];
 
