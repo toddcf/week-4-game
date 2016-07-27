@@ -34,11 +34,85 @@ $( document ).ready(function() {
 	// This displays the maxValue to the screen.
 	$('#maxValue').text(maxValue);
 
+	// When the blue crystal is clicked, its current value is added to the counter.
 	$('#blue').click(function() {
 		counter = counter + blueCrystal;
 		$('#yourNumber').text(counter);
+		
+		if (counter == maxValue) {
+			alert('You won! You escaped with the crystals and your life!');
+			wins = wins + 1;
+			$('#yourWins').text(wins);
+			crystalCollector();
+		}
+
+		else if(counter > maxValue) {
+			alert('You lost -- the walls caved in.');
+			losses = losses + 1;
+			$('#yourLosses').text(losses);
+			crystalCollector();
+		}
 	});
 
+	// When the green crystal is clicked, its current value is added to the counter.
+	$('#green').click(function() {
+		counter = counter + greenCrystal;
+		$('#yourNumber').text(counter);
+	
+		if (counter == maxValue) {
+			alert('You won! You escaped with the crystals and your life!');
+			wins = wins + 1;
+			$('#yourWins').text(wins);
+			crystalCollector();
+		}
+
+		else if(counter > maxValue) {
+			alert('You lost -- the walls caved in.');
+			losses = losses + 1;
+			$('#yourLosses').text(losses);
+			crystalCollector();
+		}
+	});
+
+	// When the red crystal is clicked, its current value is added to the counter.
+	$('#red').click(function() {
+		counter = counter + redCrystal;
+		$('#yourNumber').text(counter);
+
+		if (counter == maxValue) {
+			alert('You won! You escaped with the crystals and your life!');
+			wins = wins + 1;
+			$('#yourWins').text(wins);
+			crystalCollector();
+		}
+
+		else if(counter > maxValue) {
+			alert('You lost -- the walls caved in.');
+			losses = losses + 1;
+			$('#yourLosses').text(losses);
+			crystalCollector();
+		}
+	});
+
+	// When the violet crystal is clicked, its current value is added to the counter.
+	$('#violet').click(function() {
+		counter = counter + violetCrystal;
+		$('#yourNumber').text(counter);
+
+		if (counter == maxValue) {
+			alert('You won! You escaped with the crystals and your life!');
+			wins = wins + 1;
+			$('#yourWins').text(wins);
+			crystalCollector();
+		}
+
+		else if(counter > maxValue) {
+			alert('You lost -- the walls caved in.');
+			losses = losses + 1;
+			$('#yourLosses').text(losses);
+			crystalCollector();
+		}
+	});
 
 	// for (var i = 0; i < crystalValues.length; i++){
 
@@ -57,19 +131,13 @@ $( document ).ready(function() {
 	// 	// alert('You\'ve collected a crystal skull!');
 	// 	counter = counter + parseInt($(this).data('num'));
 
- 	// This line holds a "0" in the "Total Value of Crystals You're Holding" before you start clicking crystals and changing the score.
+ 	// This line holds a "0" in each scoreboard field before you start clicking crystals and earning points.
 	$('#yourNumber').text(counter);
+	$('#yourWins').text(wins);
+	$('#yourLosses').text(losses);
 		
-		if (counter == maxValue) {
-			alert('You won! You escaped with the crystals and your life!');
-			$('#yourWins').text(wins);
-		}
-
-		else if(counter > maxValue) {
-			alert('You lost -- the walls caved in.');
-			$('#yourLosses').text(losses);
-		}
-	};
+	
+};
 
 });
 
