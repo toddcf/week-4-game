@@ -11,6 +11,8 @@ $( document ).ready(function() {
 			// Not sure if the line of code below is doing anything.
 			// $('#maxValue').html();
 
+	// Assigns a variable for each crystal.
+	// Each new game, each crystal is assigned a new random number between 1 and 12.
 	var blueCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
 			console.log(blueCrystal);
 
@@ -32,6 +34,12 @@ $( document ).ready(function() {
 	// This displays the maxValue to the screen.
 	$('#maxValue').text(maxValue);
 
+	$('#blue').click(function() {
+		counter = counter + blueCrystal;
+		$('#yourNumber').text(counter);
+	});
+
+
 	// for (var i = 0; i < crystalValues.length; i++){
 
 	// 	// What does this do?? I'm suspicious of it!
@@ -43,14 +51,14 @@ $( document ).ready(function() {
 	// }
 
 
-	/* The below code is all-encompassing for anything with a .crystals class.
-	I'm going to try doing each crystal individually.
-	$('.crystals').on('click', function() {
-		// alert('You\'ve collected a crystal skull!');
-		counter = counter + parseInt($(this).data('num'));
+	// The below code is all-encompassing for anything with a .crystals class.
+	// I'm going to try doing each crystal individually.
+	// $('.crystals').on('click', function() {
+	// 	// alert('You\'ve collected a crystal skull!');
+	// 	counter = counter + parseInt($(this).data('num'));
 
-		// NOTE: This is giving me NaN (Not a Number).
-		$('#yourNumber').text(counter);
+ 	// This line holds a "0" in the "Total Value of Crystals You're Holding" before you start clicking crystals and changing the score.
+	$('#yourNumber').text(counter);
 		
 		if (counter == maxValue) {
 			alert('You won! You escaped with the crystals and your life!');
@@ -61,8 +69,8 @@ $( document ).ready(function() {
 			alert('You lost -- the walls caved in.');
 			$('#yourLosses').text(losses);
 		}
-	});
-}
+	};
+
 });
 
 
