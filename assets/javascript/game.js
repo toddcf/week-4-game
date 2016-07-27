@@ -25,7 +25,8 @@ $( document ).ready(function() {
 	var violetCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
 			console.log(violetCrystal);
 
-	var counter = 0;
+	// Counter used to equal 0, but it wasn't resetting when the game reset.
+	var counter = 0
 
 	var wins = 0;
 
@@ -43,14 +44,14 @@ $( document ).ready(function() {
 			alert('You won! You escaped with the crystals and your life!');
 			wins = wins + 1;
 			$('#yourWins').text(wins);
-			crystalCollector();
+			$(":reset")
 		}
 
 		else if(counter > maxValue) {
 			alert('You lost -- the walls caved in.');
 			losses = losses + 1;
 			$('#yourLosses').text(losses);
-			crystalCollector();
+			$(":reset")
 		}
 	});
 
@@ -63,14 +64,14 @@ $( document ).ready(function() {
 			alert('You won! You escaped with the crystals and your life!');
 			wins = wins + 1;
 			$('#yourWins').text(wins);
-			crystalCollector();
+			$(":reset")
 		}
 
 		else if(counter > maxValue) {
 			alert('You lost -- the walls caved in.');
 			losses = losses + 1;
 			$('#yourLosses').text(losses);
-			crystalCollector();
+			$(":reset")
 		}
 	});
 
@@ -83,14 +84,14 @@ $( document ).ready(function() {
 			alert('You won! You escaped with the crystals and your life!');
 			wins = wins + 1;
 			$('#yourWins').text(wins);
-			crystalCollector();
+			$(":reset")
 		}
 
 		else if(counter > maxValue) {
 			alert('You lost -- the walls caved in.');
 			losses = losses + 1;
 			$('#yourLosses').text(losses);
-			crystalCollector();
+			$(":reset")
 		}
 	});
 
@@ -103,14 +104,14 @@ $( document ).ready(function() {
 			alert('You won! You escaped with the crystals and your life!');
 			wins = wins + 1;
 			$('#yourWins').text(wins);
-			crystalCollector();
+			$(":reset")
 		}
 
 		else if(counter > maxValue) {
 			alert('You lost -- the walls caved in.');
 			losses = losses + 1;
 			$('#yourLosses').text(losses);
-			crystalCollector();
+			$(":reset")
 		}
 	});
 
