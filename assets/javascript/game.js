@@ -1,12 +1,27 @@
 $( document ).ready(function() {
 
+	crystalCollector();
+	function crystalCollector() {
+
 	// numberToGuess = maxValue
 	// Set minimum value to 19.
 	// Set max value to 120.
 	var maxValue = Math.floor(Math.random() * (120 - 19)) + 19;
 			console.log(maxValue);
-			// Print the number to the screen.
-			$('#maxValue').html();
+			// Not sure if the line of code below is doing anything.
+			// $('#maxValue').html();
+
+	var blueCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+			console.log(blueCrystal);
+
+	var greenCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+			console.log(greenCrystal);
+
+	var redCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+			console.log(redCrystal);
+
+	var violetCrystal = Math.floor(Math.random() * (12 - 1)) + 1;
+			console.log(violetCrystal);
 
 	var counter = 0;
 
@@ -14,11 +29,7 @@ $( document ).ready(function() {
 
 	var losses = 0;
 
-	// Four numbers between 1 and 12.
-	// They are supposed to be randomly generated (and therefore different) each game.
-	// numbers = crystalValues
-	var crystalValues = [6, 10, 1, 3];
-
+	// This displays the maxValue to the screen.
 	$('#maxValue').text(maxValue);
 
 	// for (var i = 0; i < crystalValues.length; i++){
@@ -31,6 +42,9 @@ $( document ).ready(function() {
 
 	// }
 
+
+	/* The below code is all-encompassing for anything with a .crystals class.
+	I'm going to try doing each crystal individually.
 	$('.crystals').on('click', function() {
 		// alert('You\'ve collected a crystal skull!');
 		counter = counter + parseInt($(this).data('num'));
@@ -48,12 +62,11 @@ $( document ).ready(function() {
 			$('#yourLosses').text(losses);
 		}
 	});
-
+}
 });
 
 
 
-// The computer will display a random number BETWEEN 19 AND 120 -- see the random number generator we made in class.
 // Each of the four crystals has A HIDDEN RANDOM VALUE BETWEEN 1 AND 12.
 // Run the function.
 // When a player clicks on a crystal button, it will add a specific amount of points to the player's total score.
